@@ -26,6 +26,9 @@
     "exactOptionalPropertyTypes": true,
     "baseUrl": ".",
     "paths": {
+      "@maistro/db": [
+        "packages/db/src/index.ts"
+      ],
       "@maistro/types": [
         "packages/types/src/index.ts"
       ],
