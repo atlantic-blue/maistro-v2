@@ -1,0 +1,9 @@
+packages:
+  - "packages/*"
+  - "platform/backend/*"
+  - "platform/infra"
+  - "portals/*"
+  - "products/*/backend"
+  - "products/*/frontend"
+  - "products/*/infra"
+  - "infrastructure/environments/*"
