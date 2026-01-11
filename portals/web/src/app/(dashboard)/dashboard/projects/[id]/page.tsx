@@ -87,7 +87,7 @@ const mockSignups: Signup[] = [
 
 export default function ProjectDetailPage() {
   const params = useParams();
-  const projectId = params.id;
+  const _projectId = params.id; // Will be used for API calls
 
   return (
     <div className="space-y-8">

@@ -7,8 +7,8 @@ import type { CreateProjectInput } from "@maistro/types";
 export default function NewProjectPage() {
   const router = useRouter();
 
-  const handleSubmit = async (data: CreateProjectInput) => {
-    console.log("Creating project:", data);
+  const handleSubmit = async (_data: CreateProjectInput) => {
+    // TODO: Replace with actual API call
     await new Promise((resolve) => setTimeout(resolve, 1000));
     router.push("/dashboard");
   };
