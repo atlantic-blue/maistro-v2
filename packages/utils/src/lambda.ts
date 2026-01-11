@@ -86,6 +86,10 @@ export function parseBody<T>(body: string | null | undefined): T | null {
   }
 }
 
-export function getUserId(event: { requestContext?: { authorizer?: { claims?: { sub?: string } } } }): string | null {
-  return event.requestContext?.authorizer?.claims?.sub ?? null;
+export function getUserId(event: any): string | null {
+  return (
+    event.requestContext?.authorizer?.jwt?.claims?.sub ??
+    event.requestContext?.authorizer?.claims?.sub ??
+    null
+  );
 }
