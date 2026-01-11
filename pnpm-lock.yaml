@@ -333,6 +333,46 @@ importers:
         specifier: ^5.3.0
         version: 5.9.3
 
+  products/validate/backend:
+    dependencies:
+      '@maistro/ai':
+        specifier: workspace:*
+        version: link:../../../packages/ai
+      '@maistro/db':
+        specifier: workspace:*
+        version: link:../../../packages/db
+      '@maistro/types':
+        specifier: workspace:*
+        version: link:../../../packages/types
+      '@maistro/utils':
+        specifier: workspace:*
+        version: link:../../../packages/utils
+    devDependencies:
+      '@types/aws-lambda':
+        specifier: ^8.10.130
+        version: 8.10.159
+      '@types/node':
+        specifier: ^20.10.0
+        version: 20.19.28
+      '@typescript-eslint/eslint-plugin':
+        specifier: ^6.13.0
+        version: 6.21.0(@typescript-eslint/parser@6.21.0(eslint@8.57.1)(typescript@5.9.3))(eslint@8.57.1)(typescript@5.9.3)
+      '@typescript-eslint/parser':
+        specifier: ^6.13.0
+        version: 6.21.0(eslint@8.57.1)(typescript@5.9.3)
+      eslint:
+        specifier: ^8.55.0
+        version: 8.57.1
+      eslint-config-prettier:
+        specifier: ^9.1.0
+        version: 9.1.2(eslint@8.57.1)
+      tsup:
+        specifier: ^8.0.0
+        version: 8.5.1(jiti@1.21.7)(postcss@8.5.6)(typescript@5.9.3)(yaml@2.8.2)
+      typescript:
+        specifier: ^5.3.0
+        version: 5.9.3
+
 packages:
 
   '@alloc/quick-lru@5.2.0':

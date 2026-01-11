@@ -29,6 +29,9 @@
       "@maistro/db": [
         "packages/db/src/index.ts"
       ],
+      "@maistro/ai": [
+        "packages/ai/src/index.ts"
+      ],
       "@maistro/types": [
         "packages/types/src/index.ts"
       ],
