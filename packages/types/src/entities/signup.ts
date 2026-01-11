@@ -38,8 +38,4 @@ export interface SignupDynamoDB {
   entityType: "SIGNUP";
 }
 
-export interface SignupListResponse {
-  items: Signup[];
-  nextCursor?: string;
-  total: number;
-}
+
