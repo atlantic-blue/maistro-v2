@@ -28,6 +28,9 @@
     "paths": {
       "@maistro/types": [
         "packages/types/src/index.ts"
+      ],
+      "@maistro/utils": [
+        "packages/utils/src/index.ts"
       ]
     }
   },
