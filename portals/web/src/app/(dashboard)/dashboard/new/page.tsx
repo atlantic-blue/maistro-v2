@@ -3,14 +3,21 @@
 import { useRouter } from "next/navigation";
 import { IdeaForm } from "@maistro/validate-frontend";
 import type { CreateProjectInput } from "@maistro/types";
+import { useCreateProject } from "@/lib/queries";
 
 export default function NewProjectPage() {
   const router = useRouter();
+  const createProject = useCreateProject();
 
-  const handleSubmit = async (_data: CreateProjectInput) => {
-    // TODO: Replace with actual API call
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    router.push("/dashboard");
+  const handleSubmit = async (data: CreateProjectInput) => {
+    try {
+      const project = await createProject.mutateAsync(data);
+      if (project) {
+        router.push(`/dashboard/projects/${project.id}`);
+      }
+    } catch {
+      // Error is handled by the mutation
+    }
   };
 
   return (
@@ -21,7 +28,12 @@ export default function NewProjectPage() {
           Describe your idea to get started with validation
         </p>
       </div>
-      <IdeaForm onSubmit={handleSubmit} />
+      {createProject.error && (
+        <div className="mb-4 p-3 text-sm text-red-500 bg-red-50 border border-red-200 rounded-md">
+          {createProject.error.message}
+        </div>
+      )}
+      <IdeaForm onSubmit={handleSubmit} isLoading={createProject.isPending} />
     </div>
   );
 }
