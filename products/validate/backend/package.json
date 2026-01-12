@@ -12,6 +12,8 @@
     "clean": "rm -rf dist"
   },
   "dependencies": {
+    "@aws-sdk/client-cloudfront": "^3.966.0",
+    "@aws-sdk/client-s3": "^3.966.0",
     "@maistro/ai": "workspace:*",
     "@maistro/db": "workspace:*",
     "@maistro/types": "workspace:*",

@@ -30,6 +30,7 @@ export interface UpdateProjectInput {
   problem?: string;
   solution?: string;
   status?: ProjectStatus;
+  publishedAt?: string;
 }
 
 export interface ProjectDynamoDB {
