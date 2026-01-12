@@ -1,0 +1,8 @@
+# Copy this file to terraform.tfvars and fill in the values
+
+project     = "maistro"
+environment = "dev"
+aws_region  = "us-east-1"
+
+app_domain     = "dev.maistroapp.com"
+landing_domain = "maistro.live"

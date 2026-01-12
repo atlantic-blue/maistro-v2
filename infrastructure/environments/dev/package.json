@@ -1,0 +1,13 @@
+{
+  "name": "@maistro/infra-dev",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "init": "terraform init",
+    "plan": "terraform plan",
+    "apply": "terraform apply",
+    "destroy": "terraform destroy",
+    "output": "terraform output -json",
+    "deploy": "terraform apply -auto-approve"
+  }
+}
